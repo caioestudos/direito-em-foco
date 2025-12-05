@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/thalitademeloadv/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary/50 transition-colors"
@@ -33,11 +33,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <Phone className="w-5 h-5 shrink-0 mt-0.5" />
-                <span>(88) 99999-9999</span>
+                <span>(88) 99603-8447</span>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <Mail className="w-5 h-5 shrink-0 mt-0.5" />
-                <span>contato@thalitamelo.adv.br</span>
+                <span>contato@thalitameloadv.com.br</span>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <Clock className="w-5 h-5 shrink-0 mt-0.5" />
@@ -52,9 +52,10 @@ const Footer = () => {
             <div className="flex items-start gap-3 text-primary-foreground/70">
               <MapPin className="w-5 h-5 shrink-0 mt-0.5" />
               <div>
-                <p>Rua São Pedro, 123, Sala 101</p>
-                <p>Centro - Juazeiro do Norte/CE</p>
-                <p>CEP: 63010-010</p>
+                <p>R. Profa. Maria Nilde Couto Bem, 220</p>
+                <p>Triângulo - Juazeiro do Norte/CE</p>
+                <p>Ed. Office Cariri, 9º Andar, Sala 915</p>
+                <p>CEP: 63041-155</p>
               </div>
             </div>
           </div>
