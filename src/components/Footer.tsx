@@ -64,7 +64,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">
           <p>© {currentYear} Thalita Melo Advocacia. Todos os direitos reservados.</p>
-          <p>OAB/CE 00.000</p>
+          <p>OAB/CE 53.837</p>
         </div>
       </div>
     </footer>
