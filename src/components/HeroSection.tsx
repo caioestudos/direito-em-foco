@@ -12,8 +12,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-20">
-        <div className="container py-6 flex items-center justify-between">
-          <img src={logo} alt="Thalita Melo Advocacia" className="h-16 md:h-20" />
+        <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <img src={logo} alt="Thalita Melo Advocacia" className="h-20 md:h-20 mx-auto md:mx-0" />
           <a
             href={whatsappLink}
             target="_blank"
