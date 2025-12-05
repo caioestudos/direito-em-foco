@@ -11,7 +11,7 @@ const credentials = [
 ];
 
 const AboutSection = () => {
-  const whatsappNumber = "5588999999999";
+  const whatsappNumber = "5588996038447";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar uma consulta com a Dra. Thalita.");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
