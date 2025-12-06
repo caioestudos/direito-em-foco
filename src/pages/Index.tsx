@@ -3,6 +3,7 @@ import TrustBar from "@/components/TrustBar";
 import AreasSection from "@/components/AreasSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
+import INSSCalculator from "@/components/INSSCalculator";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -18,6 +19,7 @@ const Index = () => {
       <AreasSection />
       <TestimonialsSection />
       <AboutSection />
+      <INSSCalculator />
       <FAQSection />
       <Footer />
       <WhatsAppButton />
