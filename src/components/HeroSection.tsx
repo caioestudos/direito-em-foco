@@ -11,9 +11,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-20">
-        <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src={logo} alt="Thalita Melo Advocacia" className="h-24 md:h-28 mx-auto md:mx-0" />
+      <header className="relative z-20 pt-6 pb-4">
+        <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
+          <img src={logo} alt="Thalita Melo Advocacia" className="h-28 md:h-36 mx-auto md:mx-0" />
           <a
             href={whatsappLink}
             target="_blank"
@@ -27,8 +27,8 @@ const HeroSection = () => {
       </header>
 
       {/* Hero Content */}
-      <div className="container min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center pt-24 pb-12">
+      <div className="container flex-1 flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center pb-12">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
