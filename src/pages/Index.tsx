@@ -7,10 +7,12 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ConsultationTrigger from "@/components/ConsultationTrigger";
+import UrgencyBar from "@/components/UrgencyBar";
 
 const Index = () => {
   return (
     <main className="overflow-hidden">
+      <UrgencyBar />
       <HeroSection />
       <TrustBar />
       <AreasSection />
