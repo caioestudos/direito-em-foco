@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 import aboutImage from "@/assets/thalita-about.jpg";
 
 const credentials = [
-  { icon: Scale, text: "OAB/CE 00.000" },
+  { icon: Scale, text: "OAB/CE 53.837" },
   { icon: BookOpen, text: "Especialista em Direito Trabalhista" },
   { icon: Award, text: "Pós-graduada em Direito Previdenciário" },
   { icon: Heart, text: "Atendimento Humanizado" },
@@ -47,7 +47,7 @@ const AboutSection = () => {
           {/* Content */}
           <div className="space-y-8 animate-fade-in delay-200 order-1 lg:order-2">
             <div>
-              <p className="text-primary font-medium mb-4">Sobre a Advogada</p>
+              <p className="text-accent font-medium mb-4">Sobre a Advogada</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
                 Dra. Thalita Melo
               </h2>

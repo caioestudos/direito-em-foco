@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
     <section className="py-20 md:py-28 bg-cream">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16 animate-fade-in">
-          <p className="text-primary font-medium mb-4">Depoimentos</p>
+          <p className="text-accent font-medium mb-4">Depoimentos</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
             O que nossos clientes dizem
           </h2>
@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                     ))}
                   </div>
                   <Quote className="w-8 h-8 text-primary/20" />
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
               ))}
             </div>
             <p className="text-sm text-muted-foreground">

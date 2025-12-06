@@ -13,7 +13,7 @@ const HeroSection = () => {
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-20">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src={logo} alt="Thalita Melo Advocacia" className="h-20 md:h-20 mx-auto md:mx-0" />
+          <img src={logo} alt="Thalita Melo Advocacia" className="h-24 md:h-28 mx-auto md:mx-0" />
           <a
             href={whatsappLink}
             target="_blank"
@@ -31,8 +31,8 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center pt-24 pb-12">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <span className="w-2 h-2 rounded-full bg-whatsapp animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
               <span className="text-sm font-medium text-foreground">
                 Atendimento imediato · Consulta gratuita
               </span>
