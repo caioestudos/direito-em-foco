@@ -34,8 +34,8 @@ const TrustBar = () => {
               className="flex flex-col items-center text-center space-y-3 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                <benefit.icon className="w-6 h-6 text-primary" />
+              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center">
+                <benefit.icon className="w-6 h-6 text-accent" />
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">{benefit.title}</h3>

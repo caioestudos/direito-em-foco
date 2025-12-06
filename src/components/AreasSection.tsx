@@ -42,7 +42,7 @@ const AreasSection = () => {
     <section id="areas" className="py-20 md:py-28 bg-background">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16 animate-fade-in">
-          <p className="text-primary font-medium mb-4">Áreas de Atuação</p>
+          <p className="text-accent font-medium mb-4">Áreas de Atuação</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
             Como posso te ajudar?
           </h2>

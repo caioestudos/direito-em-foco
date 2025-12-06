@@ -38,7 +38,7 @@ const FAQSection = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <p className="text-primary font-medium mb-4">Perguntas Frequentes</p>
+            <p className="text-accent font-medium mb-4">Perguntas Frequentes</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
               Tire suas dúvidas
             </h2>
@@ -55,7 +55,7 @@ const FAQSection = () => {
                 className="bg-card rounded-xl border border-border/50 px-6 data-[state=open]:shadow-card transition-shadow animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary py-5 hover:no-underline">
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-accent py-5 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
