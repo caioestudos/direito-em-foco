@@ -72,20 +72,18 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex items-center gap-6 pt-4">
-              <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">500+</p>
-                <p className="text-sm text-muted-foreground">Casos resolvidos</p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-4">
+              <div className="text-center sm:text-left">
+                <p className="text-lg md:text-xl font-serif font-semibold text-foreground">Agenda disponível</p>
               </div>
-              <div className="w-px h-12 bg-border"></div>
-              <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">8+</p>
-                <p className="text-sm text-muted-foreground">Anos de experiência</p>
+              <div className="hidden sm:block w-px h-12 bg-border"></div>
+              <div className="text-center sm:text-left">
+                <p className="text-lg md:text-xl font-serif font-semibold text-foreground">Foco total no seu caso</p>
               </div>
-              <div className="w-px h-12 bg-border"></div>
-              <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">98%</p>
-                <p className="text-sm text-muted-foreground">Clientes satisfeitos</p>
+              <div className="hidden sm:block w-px h-12 bg-border"></div>
+              <div className="text-center sm:text-left">
+                <p className="text-lg md:text-xl font-serif font-semibold text-foreground">+100 clientes atendidos este ano</p>
+                <p className="text-sm text-muted-foreground">Advocacia com dedicação e olhar humano para o seu caso</p>
               </div>
             </div>
 
