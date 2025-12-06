@@ -40,15 +40,15 @@ const ConsultationTrigger = () => {
 
   return (
     <>
-      {/* Floating CTA Button - Desktop */}
-      <Button
+      {/* Floating CTA Button - Desativado conforme solicitação */}
+      {/* <Button
         onClick={() => setIsPopupOpen(true)}
         className="hidden lg:flex fixed bottom-8 left-8 z-40 bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover:shadow-glow transition-all duration-300 gap-2"
         size="lg"
       >
         <Calendar className="w-5 h-5" />
         Consulta Gratuita
-      </Button>
+      </Button> */}
 
       <ConsultationPopup open={isPopupOpen} onOpenChange={setIsPopupOpen} />
     </>
