@@ -88,9 +88,21 @@ const HeroSection = () => {
                 <p className="text-sm text-muted-foreground">Clientes satisfeitos</p>
               </div>
             </div>
+
+            {/* Mobile Hero Image */}
+            <div className="relative animate-fade-in delay-200 lg:hidden mt-8">
+              <div className="relative mx-auto max-w-sm">
+                <div className="absolute -inset-3 bg-primary/10 rounded-2xl transform rotate-2"></div>
+                <img
+                  src={heroImage}
+                  alt="Dra. Thalita Melo"
+                  className="relative rounded-xl shadow-elegant w-full h-[350px] object-cover object-top"
+                />
+              </div>
+            </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Desktop Hero Image */}
           <div className="relative animate-fade-in delay-200 hidden lg:block">
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/10 rounded-3xl transform rotate-3"></div>
