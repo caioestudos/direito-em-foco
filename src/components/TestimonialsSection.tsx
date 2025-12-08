@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
               ))}
             </div>
             <p className="text-sm text-muted-foreground">
-              <span className="font-semibold text-foreground">+100 clientes</span> atendidos este ano
+              <span className="font-semibold text-foreground">Advocacia com dedicação</span> e olhar humano para o seu caso
             </p>
           </div>
           <div className="flex items-center gap-2">
