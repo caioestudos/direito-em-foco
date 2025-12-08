@@ -5,10 +5,12 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
 import INSSCalculator from "@/components/INSSCalculator";
 import FAQSection from "@/components/FAQSection";
+import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ConsultationTrigger from "@/components/ConsultationTrigger";
 import UrgencyBar from "@/components/UrgencyBar";
+import SocialProofNotification from "@/components/SocialProofNotification";
 
 const Index = () => {
   return (
@@ -21,9 +23,11 @@ const Index = () => {
       <AboutSection />
       <INSSCalculator />
       <FAQSection />
+      <LocationSection />
       <Footer />
       <WhatsAppButton />
       <ConsultationTrigger />
+      <SocialProofNotification />
     </main>
   );
 };
