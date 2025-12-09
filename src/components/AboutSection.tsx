@@ -1,7 +1,7 @@
 import { Award, BookOpen, Heart, Scale } from "lucide-react";
 import { Button } from "./ui/button";
 import { MessageCircle } from "lucide-react";
-import aboutImage from "@/assets/thalita-about.jpg";
+import aboutImage from "@/assets/thalita-perfil-1.jpg";
 const credentials = [{
   icon: Scale,
   text: "OAB/CE 53.837"
