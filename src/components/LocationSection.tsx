@@ -1,6 +1,9 @@
 import { MapPin, Clock, Phone, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import predioImg from "@/assets/predio.jpg";
+import recepcaoImg from "@/assets/recepcao.jpg";
+import escritorioImg from "@/assets/escritorio.jpg";
+import visaoEscritorioImg from "@/assets/visao-escritorio.jpg";
 const LocationSection = () => {
   const address = "R. Profa. Maria Nilde Couto Bem, 220 - Triângulo, Juazeiro do Norte - CE, 63041-155";
   const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.8726969088!2d-39.31555982425!3d-7.213889692792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a17f1c0b1f8b51%3A0x7eb4c0a5a3f8e1c7!2sEdif%C3%ADcio%20Office%20Cariri!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr`;
@@ -87,23 +90,33 @@ const LocationSection = () => {
 
             {/* Office Images Grid */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-gold/20 flex items-center justify-center shadow-card">
-                <div className="text-center p-4">
-                  <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Fachada do Edifício</p>
-                </div>
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-card">
+                <img 
+                  src={predioImg} 
+                  alt="Fachada do Edifício Office Cariri" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <div className="aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-gold/20 to-primary/20 flex items-center justify-center shadow-card">
-                <div className="text-center p-4">
-                  <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Recepção</p>
-                </div>
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-card">
+                <img 
+                  src={recepcaoImg} 
+                  alt="Recepção do Edifício" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <div className="aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-navy/20 to-primary/20 flex items-center justify-center shadow-card col-span-2">
-                <div className="text-center p-4">
-                  <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Sala de Atendimento</p>
-                </div>
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-card">
+                <img 
+                  src={escritorioImg} 
+                  alt="Escritório de Advocacia" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-card">
+                <img 
+                  src={visaoEscritorioImg} 
+                  alt="Vista do Escritório" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
             </div>
           </div>
