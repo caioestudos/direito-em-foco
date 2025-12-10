@@ -74,7 +74,7 @@ const LocationSection = () => {
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm font-medium text-foreground">Telefone</p>
-                    <p className="text-sm text-muted-foreground">(88) 99603-8447</p>
+                    <p className="text-sm text-muted-foreground">88996017070</p>
                   </div>
                 </div>
               </div>

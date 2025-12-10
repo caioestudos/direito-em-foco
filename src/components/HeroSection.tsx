@@ -21,7 +21,7 @@ const HeroSection = () => {
             className="hidden md:flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
-            (88) 99603-8447
+            88996017070
           </a>
         </div>
       </header>

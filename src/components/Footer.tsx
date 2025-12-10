@@ -21,6 +21,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary/50 transition-colors"
+                aria-label="Instagram de Thalita Melo Advocacia"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -33,7 +34,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <Phone className="w-5 h-5 shrink-0 mt-0.5" />
-                <span>(88) 99603-8447</span>
+                <span>88996017070</span>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <Mail className="w-5 h-5 shrink-0 mt-0.5" />
