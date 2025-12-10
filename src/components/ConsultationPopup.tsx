@@ -75,7 +75,7 @@ const ConsultationPopup = ({ open, onOpenChange }: ConsultationPopupProps) => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
     
     // For now, open WhatsApp with the data
-    const whatsappNumber = "5588996038447";
+    const whatsappNumber = "5588996017070";
     const message = encodeURIComponent(
       `*Nova Solicitação de Consulta Gratuita*\n\n` +
       `*Nome:* ${data.name}\n` +

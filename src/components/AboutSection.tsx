@@ -16,7 +16,7 @@ const credentials = [{
   text: "Atendimento Humanizado"
 }];
 const AboutSection = () => {
-  const whatsappNumber = "5588996038447";
+  const whatsappNumber = "5588996017070";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar uma consulta com a Dra. Thalita.");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
   return <section id="sobre" className="py-20 md:py-28 bg-background">

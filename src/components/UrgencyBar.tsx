@@ -5,7 +5,7 @@ const UrgencyBar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
-  const whatsappNumber = "5588996038447";
+  const whatsappNumber = "5588996017070";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar uma consulta gratuita.");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 

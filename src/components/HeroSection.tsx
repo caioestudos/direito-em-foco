@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 import heroImage from "@/assets/thalita-hero.jpg";
 
 const HeroSection = () => {
-  const whatsappNumber = "5588996038447";
+  const whatsappNumber = "5588996017070";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar uma consulta.");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 

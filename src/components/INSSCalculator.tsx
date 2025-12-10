@@ -22,7 +22,7 @@ const INSSCalculator = () => {
     rule: string;
   } | null>(null);
 
-  const whatsappNumber = "5588996038447";
+  const whatsappNumber = "5588996017070";
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("pt-BR", {

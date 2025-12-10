@@ -36,7 +36,7 @@ const areas = [
 ];
 
 const AreasSection = () => {
-  const whatsappNumber = "5588996038447";
+  const whatsappNumber = "5588996017070";
 
   return (
     <section id="areas" className="py-20 md:py-28 bg-background">
