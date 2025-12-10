@@ -219,3 +219,15 @@ html {
   background-color: hsl(35 48% 42% / 0.2);
   color: hsl(240 78% 9%);
 }
+
+a[href*="lovable.dev"], 
+iframe[src*="lovable.dev"],
+div[style*="Edit with Lovable"],
+.lovable-badge {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
