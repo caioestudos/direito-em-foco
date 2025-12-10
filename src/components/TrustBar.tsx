@@ -3,8 +3,8 @@ import { Shield, Heart, MapPin, Clock } from "lucide-react";
 const benefits = [
   {
     icon: Shield,
-    title: "Mais de 500 casos",
-    description: "Resolvidos com sucesso",
+    title: "Consulta",
+    description: "Gratuita",
   },
   {
     icon: Heart,
