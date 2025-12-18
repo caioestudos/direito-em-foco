@@ -4,7 +4,6 @@ import AreasSection from "@/components/AreasSection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
-import INSSCalculator from "@/components/INSSCalculator";
 import { SimulationWizard } from "@/components/simulator/SimulationWizard";
 import FAQSection from "@/components/FAQSection";
 import LocationSection from "@/components/LocationSection";
@@ -24,7 +23,6 @@ const Index = () => {
       <ProcessSection />
       <TestimonialsSection />
       <AboutSection />
-      <INSSCalculator />
       <SimulationWizard />
       <FAQSection />
       <LocationSection />

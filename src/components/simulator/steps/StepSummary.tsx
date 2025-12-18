@@ -3,7 +3,7 @@ import { useSimulationWizard } from "../WizardContext";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, UploadCloud, FileDown, FileText } from "lucide-react";
+import { ShieldCheck, UploadCloud, FileDown, FileText, MessageCircle } from "lucide-react";
 import { calculateSimulation } from "@/services/calculation-engine";
 import type { RegraResultado } from "@/types/simulation";
 import { downloadDraftJson, downloadResultCsv, downloadResultPdf } from "@/services/exporters";
@@ -15,6 +15,8 @@ const formatCurrency = (value?: number) =>
         style: "currency",
         currency: "BRL",
       });
+
+const whatsappNumber = "5588996017070";
 
 const RuleCard = ({ rule }: { rule: RegraResultado }) => {
   const improvement =
@@ -72,6 +74,90 @@ const RuleCard = ({ rule }: { rule: RegraResultado }) => {
 export const StepSummary = () => {
   const { draft } = useSimulationWizard();
   const result = useMemo(() => calculateSimulation(draft), [draft]);
+
+  const handleWhatsAppClick = () => {
+    const { basicData } = draft;
+    
+    // Formatar dados básicos
+    const sexoLabel = basicData.sexo === "masculino" ? "Masculino" : basicData.sexo === "feminino" ? "Feminino" : "Não informado";
+    const dataNascFormatted = basicData.dataNascimento ? new Date(basicData.dataNascimento).toLocaleDateString("pt-BR") : "Não informado";
+    const derFormatted = basicData.der ? new Date(basicData.der).toLocaleDateString("pt-BR") : "Não informado";
+    const derReafirmadaFormatted = basicData.derReafirmada ? new Date(basicData.derReafirmada).toLocaleDateString("pt-BR") : "Não informado";
+    const beneficioTipo = basicData.tipoBeneficio.length > 0 ? basicData.tipoBeneficio.join(", ") : "Não especificado";
+
+    // Encontrar melhor resultado
+    let melhorRegra = "";
+    let melhorValor = 0;
+    result.cenarios.forEach((cenario) => {
+      if (cenario.melhorOpcao) {
+        const valor = cenario.melhorOpcao.rmiComDescarte || cenario.melhorOpcao.rmiSemDescarte || 0;
+        if (valor > melhorValor) {
+          melhorValor = valor;
+          melhorRegra = `${cenario.melhorOpcao.nome} (${cenario.derTipo === "atual" ? "DER Atual" : "DER Reafirmada"})`;
+        }
+      }
+    });
+
+    // Construir mensagem
+    let message = `*🧮 SIMULAÇÃO DE APOSENTADORIA INSS*\n\n`;
+    
+    message += `*📋 DADOS BÁSICOS*\n`;
+    message += `• Sexo: ${sexoLabel}\n`;
+    message += `• Data de Nascimento: ${dataNascFormatted}\n`;
+    message += `• DER: ${derFormatted}\n`;
+    if (basicData.derReafirmada) {
+      message += `• DER Reafirmada: ${derReafirmadaFormatted}\n`;
+    }
+    message += `• Tipo de Benefício: ${beneficioTipo}\n\n`;
+
+    message += `*📊 RESUMO DA SIMULAÇÃO*\n`;
+    message += `• Períodos importados: ${draft.periodos.length}\n`;
+    message += `• Remunerações: ${draft.remuneracoes.length}\n`;
+    message += `• Alertas críticos: ${result.alertas.length}\n\n`;
+
+    if (melhorRegra && melhorValor > 0) {
+      message += `*✅ MELHOR OPÇÃO IDENTIFICADA*\n`;
+      message += `• Regra: ${melhorRegra}\n`;
+      message += `• Valor estimado: ${formatCurrency(melhorValor)}\n\n`;
+    }
+
+    // Adicionar resultados por cenário
+    result.cenarios.forEach((cenario) => {
+      message += `*${cenario.derTipo === "atual" ? "📅 CENÁRIO DER ATUAL" : "📅 CENÁRIO DER REAFIRMADA"}*\n`;
+      message += `DER: ${new Date(cenario.der).toLocaleDateString("pt-BR")}\n\n`;
+      
+      cenario.resultados.forEach((regra) => {
+        if (regra.elegivel) {
+          message += `  ✓ ${regra.nome}\n`;
+          message += `    RMI sem descarte: ${formatCurrency(regra.rmiSemDescarte)}\n`;
+          message += `    RMI com descarte: ${formatCurrency(regra.rmiComDescarte)}\n`;
+          if (regra.ganhoEstimado && regra.ganhoEstimado > 0) {
+            message += `    Ganho: ${regra.ganhoEstimado.toFixed(2)}%\n`;
+          }
+        } else {
+          message += `  ✗ ${regra.nome} (Não elegível)\n`;
+          if (regra.motivoNaoElegivel) {
+            message += `    Motivo: ${regra.motivoNaoElegivel}\n`;
+          }
+        }
+        message += `\n`;
+      });
+    });
+
+    if (result.alertas.length > 0) {
+      message += `*⚠️ ALERTAS*\n`;
+      result.alertas.forEach((alerta) => {
+        message += `• ${alerta}\n`;
+      });
+      message += `\n`;
+    }
+
+    message += `*📞 PRÓXIMOS PASSOS*\n`;
+    message += `Gostaria de uma análise jurídica completa e personalizada do meu caso para validar estes resultados e dar entrada no benefício.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+  };
 
   const resumo = [
     {
@@ -159,6 +245,16 @@ export const StepSummary = () => {
           <div className="rounded-2xl border border-dashed border-border/70 bg-muted/10 p-4 text-sm text-muted-foreground">
             <p className="font-semibold text-foreground">Metodologia resumida</p>
             <p className="mt-1">{result.metodologiaResumo}</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Button 
+              className="gap-2 bg-whatsapp hover:bg-whatsapp/90 text-white w-full sm:w-auto" 
+              onClick={handleWhatsAppClick}
+              size="lg"
+            >
+              <MessageCircle className="h-5 w-5" />
+              Enviar Resumo via WhatsApp
+            </Button>
           </div>
           <div className="flex flex-wrap gap-3">
             <Button variant="outline" className="gap-2" onClick={() => downloadDraftJson(draft)}>
