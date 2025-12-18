@@ -19,48 +19,50 @@ export const StepReview = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <ScrollArea className="max-h-[320px] rounded-xl border border-border/60">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Início</TableHead>
-                  <TableHead>Fim</TableHead>
-                  <TableHead>Categoria</TableHead>
-                  <TableHead>Carência</TableHead>
-                  <TableHead>Fonte</TableHead>
-                  <TableHead />
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {draft.periodos.length === 0 && (
+          <div className="overflow-x-auto">
+            <ScrollArea className="max-h-[320px] rounded-xl border border-border/60">
+              <Table className="min-w-[600px]">
+                <TableHeader>
                   <TableRow>
-                    <TableCell colSpan={6} className="text-center text-sm text-muted-foreground">
-                      Nenhum período importado ainda. Envie o CNIS, Contagem ou adicione manualmente.
-                    </TableCell>
+                    <TableHead>Início</TableHead>
+                    <TableHead>Fim</TableHead>
+                    <TableHead>Categoria</TableHead>
+                    <TableHead>Carência</TableHead>
+                    <TableHead>Fonte</TableHead>
+                    <TableHead />
                   </TableRow>
-                )}
-                {draft.periodos.map((periodo) => (
-                  <TableRow key={periodo.id} className="text-sm">
-                    <TableCell>{periodo.inicio}</TableCell>
-                    <TableCell>{periodo.fim}</TableCell>
-                    <TableCell>
-                      <Badge variant="secondary">{periodo.categoria}</Badge>
-                    </TableCell>
-                    <TableCell>{periodo.indicadorCarencia ? "Sim" : "Não"}</TableCell>
-                    <TableCell>
-                      <Badge variant="outline">{periodo.fonte.replace("_upload", "").toUpperCase()}</Badge>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <Button variant="ghost" size="icon" onClick={() => removePeriodo(periodo.id)}>
-                        <Trash2 className="h-4 w-4 text-muted-foreground" />
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </ScrollArea>
-          <Button variant="outline" className="mt-4">
+                </TableHeader>
+                <TableBody>
+                  {draft.periodos.length === 0 && (
+                    <TableRow>
+                      <TableCell colSpan={6} className="text-center text-sm text-muted-foreground">
+                        Nenhum período importado ainda. Envie o CNIS, Contagem ou adicione manualmente.
+                      </TableCell>
+                    </TableRow>
+                  )}
+                  {draft.periodos.map((periodo) => (
+                    <TableRow key={periodo.id} className="text-sm">
+                      <TableCell>{periodo.inicio}</TableCell>
+                      <TableCell>{periodo.fim}</TableCell>
+                      <TableCell>
+                        <Badge variant="secondary">{periodo.categoria}</Badge>
+                      </TableCell>
+                      <TableCell>{periodo.indicadorCarencia ? "Sim" : "Não"}</TableCell>
+                      <TableCell>
+                        <Badge variant="outline">{periodo.fonte.replace("_upload", "").toUpperCase()}</Badge>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="icon" onClick={() => removePeriodo(periodo.id)}>
+                          <Trash2 className="h-4 w-4 text-muted-foreground" />
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </ScrollArea>
+          </div>
+          <Button variant="outline" className="mt-4 w-full sm:w-auto">
             Adicionar período manualmente
           </Button>
         </CardContent>
@@ -74,15 +76,16 @@ export const StepReview = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <ScrollArea className="max-h-[320px] rounded-xl border border-border/60">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Competência</TableHead>
-                  <TableHead>Valor (R$)</TableHead>
-                  <TableHead>Origem</TableHead>
-                  <TableHead>Alertas</TableHead>
-                  <TableHead />
+          <div className="overflow-x-auto">
+            <ScrollArea className="max-h-[320px] rounded-xl border border-border/60">
+              <Table className="min-w-[600px]">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="text-xs">Competência</TableHead>
+                    <TableHead className="text-xs">Valor (R$)</TableHead>
+                    <TableHead className="text-xs">Origem</TableHead>
+                    <TableHead className="text-xs">Alertas</TableHead>
+                    <TableHead />
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -95,10 +98,10 @@ export const StepReview = () => {
                 )}
                 {draft.remuneracoes.map((remuneracao) => (
                   <TableRow key={remuneracao.id}>
-                    <TableCell>{remuneracao.competencia}</TableCell>
-                    <TableCell>{remuneracao.valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</TableCell>
+                    <TableCell className="text-xs">{remuneracao.competencia}</TableCell>
+                    <TableCell className="text-xs">{remuneracao.valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</TableCell>
                     <TableCell>
-                      <Badge variant="secondary">{remuneracao.fonte}</Badge>
+                      <Badge variant="secondary" className="text-[10px]">{remuneracao.fonte}</Badge>
                     </TableCell>
                     <TableCell>
                       {remuneracao.inconsistente ? (
@@ -117,6 +120,7 @@ export const StepReview = () => {
               </TableBody>
             </Table>
           </ScrollArea>
+          </div>
           <div className="mt-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
             <Badge variant="outline">Detecção de duplicidade</Badge>
             <Badge variant="outline">Alerta salário mínimo</Badge>

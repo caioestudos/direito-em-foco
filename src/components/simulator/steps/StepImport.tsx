@@ -82,11 +82,11 @@ export const StepImport = () => {
         </CardHeader>
         <CardContent>
           <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as ImportMode)} className="space-y-6">
-            <TabsList className="grid w-full grid-cols-3">
+            <TabsList className="grid w-full grid-cols-3 gap-1">
               {tabConfig.map((tab) => (
-                <TabsTrigger key={tab.id} value={tab.id} className="text-xs md:text-sm">
-                  <div className="mr-2">{tab.icon}</div>
-                  {tab.label}
+                <TabsTrigger key={tab.id} value={tab.id} className="text-[10px] sm:text-xs md:text-sm px-1 sm:px-3 py-2 flex-col sm:flex-row gap-1">
+                  <div className="sm:mr-2">{tab.icon}</div>
+                  <span className="truncate">{tab.label}</span>
                 </TabsTrigger>
               ))}
             </TabsList>

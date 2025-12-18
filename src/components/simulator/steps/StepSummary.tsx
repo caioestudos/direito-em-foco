@@ -269,7 +269,15 @@ export const StepSummary = () => {
               <FileDown className="h-4 w-4" />
               Baixar PDF
             </Button>
-            <Button className="gap-2" variant="secondary">
+            <Button 
+              className="gap-2" 
+              variant="secondary"
+              onClick={() => {
+                const message = `*🔍 SOLICITAÇÃO DE AUDITORIA*\n\nOlá! Gostaria de solicitar uma auditoria completa da minha simulação de aposentadoria INSS.\n\n*Dados da simulação:*\n• Períodos: ${draft.periodos.length}\n• Remunerações: ${draft.remuneracoes.length}\n• Alertas: ${result.alertas.length}\n\nPor favor, entre em contato para discutir os próximos passos.`;
+                const encodedMessage = encodeURIComponent(message);
+                window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+              }}
+            >
               <ShieldCheck className="h-4 w-4" />
               Solicitar auditoria
             </Button>
