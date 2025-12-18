@@ -1,4 +1,4 @@
-import { Briefcase, FileCheck, Users, Heart, ShoppingBag, ArrowRight } from "lucide-react";
+import { Briefcase, FileCheck, Users, Heart, ShoppingBag, Scale, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -32,6 +32,12 @@ const areas = [
     title: "Direito do Consumidor",
     description: "Produto com defeito, propaganda enganosa, cobranças indevidas e recalls.",
     problems: ["Produto com defeito", "Cobrado indevidamente", "Serviço não prestado"],
+  },
+  {
+    icon: Scale,
+    title: "Advocacia Geral",
+    description: "Consultoria jurídica, elaboração de contratos, pareceres e outras demandas.",
+    problems: ["Preciso de consultoria", "Elaborar um contrato", "Orientação jurídica"],
   },
 ];
 
