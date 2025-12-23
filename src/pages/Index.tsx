@@ -4,7 +4,7 @@ import AreasSection from "@/components/AreasSection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
-import { SimulationWizard } from "@/components/simulator/SimulationWizard";
+import CalculatorHub from "@/components/CalculatorHub";
 import FAQSection from "@/components/FAQSection";
 import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
@@ -23,7 +23,7 @@ const Index = () => {
       <ProcessSection />
       <TestimonialsSection />
       <AboutSection />
-      <SimulationWizard />
+      <CalculatorHub />
       <FAQSection />
       <LocationSection />
       <Footer />

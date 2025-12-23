@@ -268,7 +268,7 @@ const INSSCalculator = () => {
                         <p className="text-sm text-muted-foreground mb-1">
                           Benefício Estimado
                         </p>
-                        <p className="text-4xl font-serif font-bold text-accent">
+                        <p className="text-3xl md:text-4xl font-serif font-bold text-accent break-words">
                           {formatCurrency(result.estimatedBenefit)}
                         </p>
                         <p className="text-sm text-muted-foreground mt-2">
@@ -278,29 +278,39 @@ const INSSCalculator = () => {
                       <p className="text-sm text-center text-foreground">
                         {result.message}
                       </p>
-                      <Button
-                        onClick={handleWhatsAppClick}
-                        className="w-full bg-whatsapp hover:bg-whatsapp/90 text-white py-5"
-                      >
-                        <MessageCircle className="w-5 h-5 mr-2" />
-                        Quero uma Análise Completa
-                      </Button>
+                      <div className="space-y-3">
+                        <Button
+                          onClick={handleWhatsAppClick}
+                          className="w-full bg-whatsapp hover:bg-whatsapp/90 text-white py-5"
+                        >
+                          <MessageCircle className="w-5 h-5 mr-2" />
+                          Solicitar Análise Completa
+                        </Button>
+                        <Button
+                          onClick={handleWhatsAppClick}
+                          variant="outline"
+                          className="w-full border-accent/30 text-accent hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <MessageCircle className="w-4 h-4 mr-2" />
+                          Tirar Dúvidas
+                        </Button>
+                      </div>
                     </div>
                   ) : (
-                    <div className="space-y-4 text-center">
-                      <p className="text-foreground font-medium">{result.message}</p>
-                      {result.rule && (
-                        <p className="text-sm text-muted-foreground">{result.rule}</p>
-                      )}
-                      <Button
-                        onClick={handleWhatsAppClick}
-                        variant="outline"
-                        className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
-                      >
-                        <MessageCircle className="w-5 h-5 mr-2" />
-                        Tirar Dúvidas pelo WhatsApp
-                      </Button>
-                    </div>
+                      <div className="space-y-3">
+                        <p className="text-foreground font-medium">{result.message}</p>
+                        {result.rule && (
+                          <p className="text-sm text-muted-foreground">{result.rule}</p>
+                        )}
+                        <Button
+                          onClick={handleWhatsAppClick}
+                          variant="outline"
+                          className="w-full border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                        >
+                          <MessageCircle className="w-5 h-5 mr-2" />
+                          Falar com Advogado
+                        </Button>
+                      </div>
                   )}
                 </div>
               )}

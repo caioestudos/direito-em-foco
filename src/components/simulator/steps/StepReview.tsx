@@ -19,9 +19,9 @@ export const StepReview = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="overflow-x-auto">
-            <ScrollArea className="max-h-[320px] rounded-xl border border-border/60">
-              <Table className="min-w-[600px]">
+          <div className="w-full max-w-full overflow-x-auto">
+            <ScrollArea className="w-full max-w-full max-h-[320px] rounded-xl border border-border/60">
+              <Table className="w-max min-w-[600px]">
                 <TableHeader>
                   <TableRow>
                     <TableHead>Início</TableHead>
@@ -76,9 +76,9 @@ export const StepReview = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="overflow-x-auto">
-            <ScrollArea className="max-h-[320px] rounded-xl border border-border/60">
-              <Table className="min-w-[600px]">
+          <div className="w-full max-w-full overflow-x-auto">
+            <ScrollArea className="w-full max-w-full max-h-[320px] rounded-xl border border-border/60">
+              <Table className="w-max min-w-[600px]">
                 <TableHeader>
                   <TableRow>
                     <TableHead className="text-xs">Competência</TableHead>
