@@ -31,9 +31,9 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center pb-12">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/70 backdrop-blur-sm border border-primary/20 shadow-card">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-              <span className="text-sm font-medium text-foreground">
+              <span className="text-sm font-medium text-foreground tracking-wide">
                 Atendimento imediato · Consulta gratuita
               </span>
             </div>
