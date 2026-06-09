@@ -74,17 +74,17 @@ const HeroSection = () => {
             {/* Trust Indicators */}
             <div className="flex items-center gap-6 pt-4">
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">Agenda</p>
+                <p className="text-2xl md:text-3xl font-serif font-semibold text-gradient-gold">Agenda</p>
                 <p className="text-sm text-muted-foreground">disponível</p>
               </div>
-              <div className="w-px h-12 bg-border"></div>
+              <div className="w-px h-12 bg-gradient-to-b from-transparent via-primary/40 to-transparent"></div>
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">Foco</p>
+                <p className="text-2xl md:text-3xl font-serif font-semibold text-gradient-gold">Foco</p>
                 <p className="text-sm text-muted-foreground">total no seu caso</p>
               </div>
-              <div className="w-px h-12 bg-border"></div>
+              <div className="w-px h-12 bg-gradient-to-b from-transparent via-primary/40 to-transparent"></div>
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">98%</p>
+                <p className="text-2xl md:text-3xl font-serif font-semibold text-gradient-gold">98%</p>
                 <p className="text-sm text-muted-foreground">Clientes satisfeitos</p>
               </div>
             </div>
