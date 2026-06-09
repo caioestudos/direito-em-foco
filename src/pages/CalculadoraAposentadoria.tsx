@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { SimulationWizard } from "@/components/simulator/SimulationWizard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -8,12 +9,23 @@ const CalculadoraAposentadoriaPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Calculadora de Aposentadoria | Direito em Foco";
+    document.title = "Calculadora de Aposentadoria INSS | Thalita Melo Advocacia";
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
+      <Helmet>
+        <title>Calculadora de Aposentadoria INSS | Thalita Melo Advocacia</title>
+        <meta
+          name="description"
+          content="Simule sua aposentadoria do INSS seguindo as regras da Reforma da Previdência. Calculadora gratuita e detalhada."
+        />
+        <link rel="canonical" href="/calculadora-aposentadoria" />
+        <meta property="og:title" content="Calculadora de Aposentadoria INSS | Thalita Melo Advocacia" />
+        <meta property="og:description" content="Simule sua aposentadoria do INSS seguindo as regras da Reforma da Previdência." />
+        <meta property="og:url" content="/calculadora-aposentadoria" />
+      </Helmet>
       <div className="container">
         <div className="pt-6 pb-4">
           <Button

@@ -1,0 +1,17 @@
+# Thalita Melo Advocacia
+
+> Escritório de advocacia humanizada em Juazeiro do Norte (CE), especializado em Direito Trabalhista e Previdenciário. Consulta gratuita pelo WhatsApp.
+
+Thalita Melo Advocacia atende toda a Região do Cariri (Juazeiro do Norte, Crato, Barbalha e cidades vizinhas) e oferece atendimento online para todo o Brasil. As principais áreas de atuação são Direito Trabalhista (rescisão, verbas rescisórias, horas extras, assédio moral) e Direito Previdenciário (aposentadoria, revisão de benefícios INSS, auxílio-doença, BPC/LOAS).
+
+## Pages
+
+- [Início](/): Apresentação do escritório, áreas de atuação, depoimentos e contato.
+- [Calculadoras Jurídicas](/calculadoras): Ferramentas gratuitas para simular direitos trabalhistas e previdenciários.
+- [Calculadora de Aposentadoria INSS](/calculadora-aposentadoria): Simulador de aposentadoria seguindo as regras da Reforma da Previdência.
+- [Calculadora de Rescisão Trabalhista](/calculadora-rescisao-trabalhista): Cálculo de verbas rescisórias trabalhistas.
+
+## Optional
+
+- [Perguntas Frequentes](/#faq): Dúvidas comuns sobre direitos trabalhistas e previdenciários.
+- [Localização](/#localizacao): Endereço e horário de atendimento do escritório.
