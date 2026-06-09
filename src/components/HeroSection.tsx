@@ -105,15 +105,16 @@ const HeroSection = () => {
           {/* Desktop Hero Image */}
           <div className="relative animate-fade-in delay-200 hidden lg:block">
             <div className="relative">
-              <div className="absolute -inset-4 bg-primary/10 rounded-3xl transform rotate-3"></div>
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-gold-soft transform rotate-3"></div>
+              <div className="absolute -inset-1.5 rounded-2xl ring-1 ring-primary/25"></div>
               <img
                 src={heroImage}
                 alt="Dra. Thalita Melo"
-                className="relative rounded-2xl shadow-elegant w-full h-[600px] object-cover object-top"
+                className="relative rounded-2xl shadow-premium w-full h-[600px] object-cover object-top"
               />
             </div>
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-card animate-float">
+            <div className="absolute -bottom-6 -left-6 bg-gradient-card border border-border/60 p-4 rounded-2xl shadow-premium animate-float">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-whatsapp/10 flex items-center justify-center">
                   <MessageCircle className="w-6 h-6 text-whatsapp" />
