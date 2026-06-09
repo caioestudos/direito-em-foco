@@ -101,7 +101,7 @@ const FAQSection = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10 animate-fade-in">
-            <p className="text-accent font-medium mb-4">Perguntas Frequentes</p>
+            <p className="section-eyebrow mb-5">Perguntas Frequentes</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
               Tire suas dúvidas
             </h2>

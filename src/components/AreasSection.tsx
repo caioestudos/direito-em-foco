@@ -48,10 +48,11 @@ const AreasSection = () => {
     <section id="areas" className="py-20 md:py-28 bg-background">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16 animate-fade-in">
-          <p className="text-accent font-medium mb-4">Áreas de Atuação</p>
+          <p className="section-eyebrow mb-5">Áreas de Atuação</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
             Como posso te ajudar?
           </h2>
+          <div className="gold-divider max-w-[120px] mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground">
             Atuação especializada em diversas áreas do direito, sempre com foco 
             na defesa dos seus direitos e resolução do seu problema.
@@ -62,11 +63,11 @@ const AreasSection = () => {
           {areas.map((area, index) => (
             <Card
               key={index}
-              className="group bg-card border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-300 animate-fade-in"
+              className="group card-premium border-0 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="p-6 space-y-4">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <CardContent className="p-7 space-y-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-primary/10 flex items-center justify-center group-hover:ring-primary/30 transition-all duration-300">
                   <area.icon className="w-7 h-7 text-primary" />
                 </div>
                 

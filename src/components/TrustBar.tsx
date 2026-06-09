@@ -25,16 +25,17 @@ const benefits = [
 
 const TrustBar = () => {
   return (
-    <section className="py-12 bg-cream">
+    <section className="py-14 bg-cream relative">
+      <div className="absolute inset-x-0 top-0 gold-divider opacity-60"></div>
       <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center space-y-3 animate-fade-in"
+              className="group flex flex-col items-center text-center space-y-3 rounded-2xl bg-gradient-card border border-border/50 p-6 hover-lift animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent/15 to-accent/5 ring-1 ring-accent/15 flex items-center justify-center transition-all duration-300 group-hover:ring-accent/30">
                 <benefit.icon className="w-6 h-6 text-accent" />
               </div>
               <div>

@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
     <section className="py-20 md:py-28 bg-cream">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16 animate-fade-in">
-          <p className="text-accent font-medium mb-4">Depoimentos</p>
+          <p className="section-eyebrow mb-5">Depoimentos</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
             O que nossos clientes dizem
           </h2>

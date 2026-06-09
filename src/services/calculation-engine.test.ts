@@ -46,7 +46,9 @@ const buildRemuneracoes = (totalMeses = 60, base = 3000): Remuneracao[] =>
     };
   });
 
-const buildDraft = (overrides?: Partial<SimulationDraft>): SimulationDraft => {
+const buildDraft = (
+  overrides?: Partial<Omit<SimulationDraft, "basicData">> & { basicData?: Partial<SimulationDraft["basicData"]> },
+): SimulationDraft => {
   const base: SimulationDraft = {
     basicData: {
       sexo: "feminino",

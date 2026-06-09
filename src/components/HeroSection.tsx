@@ -31,9 +31,9 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center pb-12">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/70 backdrop-blur-sm border border-primary/20 shadow-card">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-              <span className="text-sm font-medium text-foreground">
+              <span className="text-sm font-medium text-foreground tracking-wide">
                 Atendimento imediato · Consulta gratuita
               </span>
             </div>
@@ -74,17 +74,17 @@ const HeroSection = () => {
             {/* Trust Indicators */}
             <div className="flex items-center gap-6 pt-4">
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">Agenda</p>
+                <p className="text-2xl md:text-3xl font-serif font-semibold text-gradient-gold">Agenda</p>
                 <p className="text-sm text-muted-foreground">disponível</p>
               </div>
-              <div className="w-px h-12 bg-border"></div>
+              <div className="w-px h-12 bg-gradient-to-b from-transparent via-primary/40 to-transparent"></div>
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">Foco</p>
+                <p className="text-2xl md:text-3xl font-serif font-semibold text-gradient-gold">Foco</p>
                 <p className="text-sm text-muted-foreground">total no seu caso</p>
               </div>
-              <div className="w-px h-12 bg-border"></div>
+              <div className="w-px h-12 bg-gradient-to-b from-transparent via-primary/40 to-transparent"></div>
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-serif font-semibold text-foreground">98%</p>
+                <p className="text-2xl md:text-3xl font-serif font-semibold text-gradient-gold">98%</p>
                 <p className="text-sm text-muted-foreground">Clientes satisfeitos</p>
               </div>
             </div>
@@ -105,15 +105,16 @@ const HeroSection = () => {
           {/* Desktop Hero Image */}
           <div className="relative animate-fade-in delay-200 hidden lg:block">
             <div className="relative">
-              <div className="absolute -inset-4 bg-primary/10 rounded-3xl transform rotate-3"></div>
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-gold-soft transform rotate-3"></div>
+              <div className="absolute -inset-1.5 rounded-2xl ring-1 ring-primary/25"></div>
               <img
                 src={heroImage}
                 alt="Dra. Thalita Melo"
-                className="relative rounded-2xl shadow-elegant w-full h-[600px] object-cover object-top"
+                className="relative rounded-2xl shadow-premium w-full h-[600px] object-cover object-top"
               />
             </div>
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-card animate-float">
+            <div className="absolute -bottom-6 -left-6 bg-gradient-card border border-border/60 p-4 rounded-2xl shadow-premium animate-float">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-whatsapp/10 flex items-center justify-center">
                   <MessageCircle className="w-6 h-6 text-whatsapp" />
