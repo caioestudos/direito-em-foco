@@ -69,7 +69,7 @@ const AboutSection = () => {
 
             {/* Credentials Grid */}
             <div className="grid grid-cols-2 gap-4 pt-4">
-              {credentials.map((cred, i) => <div key={i} className="flex items-center gap-3 p-3.5 rounded-xl bg-gradient-card border border-border/50 hover-lift">{/* eslint-disable-line */}
+              {credentials.map((cred, i) => <div key={i} className="flex items-center gap-3 p-3.5 rounded-xl bg-gradient-card border border-border/50 hover-lift">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <cred.icon className="w-5 h-5 text-primary" />
                   </div>
