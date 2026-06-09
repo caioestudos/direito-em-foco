@@ -20,9 +20,9 @@ const CalculatorHub = ({ className = "" }: CalculatorHubProps) => {
           <span className="text-sm font-medium text-accent uppercase tracking-wider">
             Ferramentas Gratuitas
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-2 mb-4">
+          <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-2 mb-4">
             Calculadoras Jurídicas
-          </h2>
+          </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Ferramentas práticas para ajudá-lo a entender seus direitos. Simule
             cenários e obtenha estimativas rápidas para planejar seu futuro.

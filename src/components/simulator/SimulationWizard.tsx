@@ -165,6 +165,7 @@ const WizardShell = () => {
               variant="outline" 
               onClick={handlePrev} 
               disabled={currentIndex === 0}
+              aria-label="Voltar para a etapa anterior"
               className="flex-1 md:flex-none h-12 md:h-10"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -173,6 +174,7 @@ const WizardShell = () => {
             <Button 
               onClick={handleNext} 
               disabled={currentIndex === steps.length - 1}
+              aria-label="Avançar para a próxima etapa"
               className="flex-1 md:flex-none h-12 md:h-10 bg-[#C99700] hover:bg-[#C99700]/90"
             >
               <span className="hidden sm:inline">Avançar</span>
@@ -193,9 +195,9 @@ export const SimulationWizard = () => (
         <span className="text-sm font-medium text-accent uppercase tracking-wider">
           Simulador Avançado
         </span>
-        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-2 mb-4">
+        <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-2 mb-4">
           Calculadora de Aposentadoria INSS
-        </h2>
+        </h1>
         <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
           Utilize nosso wizard avançado para simular sua aposentadoria de forma completa e detalhada, seguindo as regras da Reforma da Previdência.
         </p>
