@@ -12,10 +12,15 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ConsultationTrigger from "@/components/ConsultationTrigger";
 import UrgencyBar from "@/components/UrgencyBar";
 import SocialProofNotification from "@/components/SocialProofNotification";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   return (
     <main className="overflow-hidden">
+      <Helmet>
+        <link rel="canonical" href="/" />
+        <meta property="og:url" content="/" />
+      </Helmet>
       <UrgencyBar />
       <HeroSection />
       <TrustBar />
